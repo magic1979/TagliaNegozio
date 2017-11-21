@@ -456,6 +456,14 @@ var app = {
 		}
 		else{
 			
+			$("#spinner").hide();
+			
+			navigator.notification.alert(
+			  'Errore di Rete, controlla la connessione internet ',  // message
+			  alertDismissed,         // callback
+			  'Connsessione',            // title
+			  'OK'                  // buttonName
+			);
 			
 			
 		}
