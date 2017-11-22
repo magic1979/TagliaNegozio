@@ -82,13 +82,15 @@ function onDeviceReady() {
     
     
     $(document).on("touchstart", "#edita", function(e){
+		
+		 window.location.href = "edita.html";
                    
-                   window.plugins.nativepagetransitions.slide({
-                                                              'direction': 'right',
-                                                              'duration': 400,
-                                                              'androiddelay': 50,
-                                                              'href': 'edita.html'
-                                                              });
+	   /*window.plugins.nativepagetransitions.slide({
+												  'direction': 'right',
+												  'duration': 400,
+												  'androiddelay': 50,
+												  'href': 'edita.html'
+												  });*/
                    
     });
     

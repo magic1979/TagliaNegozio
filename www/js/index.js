@@ -40,6 +40,19 @@ var app = {
 		//document.addEventListener("pause", onPause, false);
 		//document.addEventListener("resume", onResume, false);
 		
+		
+		var myScroll;
+                        
+		function loaded () {
+			myScroll = new IScroll('wrapper', { click: true });
+			
+			setTimeout (function(){
+				myScroll.refresh();
+			}, 1500);
+		}
+						
+		
+		
 		if (localStorage.getItem("email") === null || localStorage.getItem("email")=="null" || typeof(localStorage.getItem("email")) == 'undefined' || localStorage.getItem("email")==0 || localStorage.getItem("email")=="") {
             
             
@@ -1198,7 +1211,7 @@ var app = {
 	
 	    $(document).on("touchstart", "#calendario", function(e){
          
-        myScroll2 = new IScroll('#wrapper2', { click: true });
+        myScroll2 = new IScroll('wrapper2', { click: true });
                    
         setTimeout (function(){
                 myScroll2.refresh();
@@ -1226,7 +1239,7 @@ var app = {
                    
                    $("#calendar").bind('change', function(event, date) {
                                        
-                                       myScroll2 = new IScroll('#wrapper2', { click: true });
+                                       myScroll2 = new IScroll('wrapper2', { click: true });
                                        
                                        var events = $("#calendar").data("jqm-calendar").settings.events;
                                        
