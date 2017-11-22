@@ -38,6 +38,136 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 		
+		
+		var pushNotification;
+			var token
+
+			
+			pushNotification = window.plugins.pushNotification;
+			
+			
+			pushNotification.register(
+			successHandler,
+			errorHandler,
+			{
+				"senderID":"54963069792",
+				"ecb":"onNotification"
+			});
+			
+			function tokenHandler (result) {
+			
+				testa(result);
+
+			}
+			
+			
+			function successHandler (result) {
+
+				testa(result);
+			}
+			
+			function errorHandler (error) {
+
+			}
+			
+			
+			function onNotification(e) {
+					   
+				switch( e.event )
+				{
+					case 'registered':
+					if ( e.regid.length > 0 )
+					{
+						//$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+						// Your GCM push server needs to know the regID before it can push to this device
+						// here is where you might want to send it the regID for later use.
+						alert("regID = " + e.regid);
+					}
+					break;
+					case 'message':
+						// if this flag is set, this notification happened while we were in the foreground.
+						// you might want to play a sound to get the user's attention, throw up a dialog, etc.
+						if (e.foreground)
+						{
+							alert('INLINE NOTIFICATION');
+							// on Android soundname is outside the payload.
+							// On Amazon FireOS all custom attributes are contained within payload
+								   
+						}
+						else
+						{	// otherwise we were launched because the user touched a notification in the notification tray.
+							if (e.coldstart)
+								alert('<li>--COLDSTART NOTIFICATION--');
+							else
+								alert('<li>--BACKGROUND NOTIFICATION--');
+						}
+						   
+						   alert('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
+						//android only
+						   alert('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
+						//amazon-fireos only
+						//$("#app-status-ul").append('<li>MESSAGE -> TIMESTAMP: ' + e.payload.timeStamp + '</li>');
+					break;
+					case 'error':
+						alert('<li>ERROR -> MSG:' + e.msg + '</li>');
+					break;
+					default:
+						alert('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+					break;
+				}
+			}
+			
+			
+			///////// PUSH NUOVE /////////
+	
+
+			function testa (testo) {
+				
+					
+				if (localStorage.getItem("Token") === null || localStorage.getItem("Token")=="null" || typeof(localStorage.getItem("Token")) == 'undefined' || localStorage.getItem("Token")==0 || localStorage.getItem("Token")=="") {
+				
+				
+				setTimeout (function(){
+							
+				
+				$.ajax({
+					   type:"GET",
+					   url:"http://www.msop.it/tagliafila/Check_RegToken.asp",
+					   data: {device:testo,platform:"android"},
+					   contentType: "application/json",
+					   json: 'callback',
+					   timeout: 7000,
+					   crossDomain: true,
+					   success:function(result){
+					   
+					   $.each(result, function(i,item){
+					   
+						 setTimeout (function(){
+							localStorage.setItem("Token", testo);
+							//alert(testo);
+						}, 500);
+					   
+					   });
+					   
+					   },
+					   error: function(){
+					   
+						 //alert("No")
+					   
+					   },
+					   dataType:"json"});
+							
+				}, 500);
+				
+				
+				}
+				
+			}
+	
+		   ///// FINE PUSH NOTIFICATION ///////////
+		
+		
+		
 		document.addEventListener("touchmove",function(e) {
 			e.preventDefault();
 		},
