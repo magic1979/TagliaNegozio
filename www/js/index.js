@@ -37,6 +37,42 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+		
+		document.addEventListener("touchmove",function(e) {
+			e.preventDefault();
+		},
+		false
+		);
+		
+		
+	var myScroll;
+    
+    myScroll = new iScroll('wrapper', {
+                           click: true,
+                           useTransform: false,
+                           //bounce: false,
+                           onBeforeScrollStart: function (e)
+                           {
+                           var target = e.target;
+                           while (target.nodeType != 1) {
+                           target = target.parentNode;
+                           }
+                           
+                           if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
+                           e.preventDefault();
+                           }
+                           }
+                           
+                           });
+    
+    
+    setTimeout (function(){
+                
+       myScroll.refresh();
+                
+     }, 200);
+		
+					
         
         //localStorage.setItem("email","")
         
@@ -1044,12 +1080,35 @@ var app = {
                        });
         
         $(document).on("touchstart", "#calendario", function(e){
+			
+						var myScroll;
+    
+    					myScroll2 = new iScroll('wrapper2', {
+                           click: true,
+                           useTransform: false,
+                           //bounce: false,
+                           onBeforeScrollStart: function (e)
+                           {
+                           var target = e.target;
+                           while (target.nodeType != 1) {
+                           target = target.parentNode;
+                           }
+                           
+                           if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
+                           e.preventDefault();
+                           }
+                           }
+                           
+                         });
+    
+    
+						setTimeout (function(){
+								
+							myScroll2.refresh();
+								
+						}, 1000);
                        
-                       myScroll2 = new IScroll('#wrapper2', { click: true });
                        
-                       setTimeout (function(){
-                                   myScroll2.refresh();
-                                   }, 1000);
                        
                        window.location.href = "#page2";
                        
