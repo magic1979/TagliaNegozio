@@ -1081,7 +1081,7 @@ var app = {
         
         $(document).on("touchstart", "#calendario", function(e){
 			
-						var myScroll;
+						var myScroll2;
     
     					myScroll2 = new iScroll('wrapper2', {
                            click: true,
@@ -1132,8 +1132,28 @@ var app = {
                        
                        $("#calendar").bind('change', function(event, date) {
                                            
-                                           myScroll2 = new IScroll('#wrapper2', { click: true });
-                                           
+                                           //myScroll2 = new IScroll('#wrapper2', { click: true });
+										   var myScroll2;
+    
+											myScroll2 = new iScroll('wrapper', {
+											   click: true,
+											   useTransform: false,
+											   //bounce: false,
+											   onBeforeScrollStart: function (e)
+											   {
+											   var target = e.target;
+											   while (target.nodeType != 1) {
+											   target = target.parentNode;
+											   }
+											   
+											   if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
+											   e.preventDefault();
+											   }
+											   }
+																   
+											});
+    
+
                                            var events = $("#calendar").data("jqm-calendar").settings.events;
                                            
                                            for ( var i = 0; i < events.length; i++ ) {
