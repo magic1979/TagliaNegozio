@@ -4,79 +4,19 @@ function onDeviceReady() {
 	//document.addEventListener("resume", onResume, false);
 	//$("body").bind('touchmove', function(e){e.preventDefault()})
 	
-	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     
     localStorage.setItem("registrato","1")
     
 
 	//openFB.init({appId: '202727853465076'});
 	
-	
-	
-	function loginFacebook() {
-		
-		openFB.login(
-				function(response) {
-					 if(response.status === 'connected') {
-					   //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
-					   getInfo()
-					 } else {
-					   //alert('Facebook login failed: ' + response.error);
-					    navigator.notification.alert(
-												  'Login Facebook fallita, riprova in seguito o fai login con Ridy',  // message
-												  alertDismissed,         // callback
-												  'Login Facebook',            // title
-												  'OK'                  // buttonName
-												  );
-					 }
-				}, {scope: 'email,public_profile,user_friends'});
-	}
-	
-	
-	
-	function getInfo() {
-		
-		openFB.api({
-				   path: '/me',
-				   success: function(data) {
-				   console.log(JSON.stringify(data));
-				   
-				   //alert(data.name);
-				   //alert(data.email);
-				   
-				   //alert('http://graph.facebook.com/' + data.id + '/picture?type=small');
-				   //document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
-				   
-				   
-				   LoginFacebookVera(data.email,data.name)
-				   
-		},
-		
-		error: errorHandler});
-	}
-	
-	
-	
+
 	
 	function errorHandler(error) {
 		alert(error.message);
 	}
-	
-	
-	
-	function logout() {
-		openFB.logout(
-			function() {
-				localStorage.setItem("email", "");
-				localStorage.setItem("emailpass", "");
-				localStorage.setItem("patente", "");
-			},
-		
-		 errorHandler);
-		
-		
-		var ref = window.open('https://m.facebook.com/', '_blank', 'location=no');
-	}
+
 	
 	
 	localStorage.setItem("pagina","log")

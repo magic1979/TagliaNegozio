@@ -60,14 +60,14 @@ function onDeviceReady() {
 	
 
 	$(document).on("touchstart", "#indietro", function(e){
-		//window.location.href = "index.html";
+		window.location.href = "next.html";
 				   
-				   window.plugins.nativepagetransitions.slide({
+				/*   window.plugins.nativepagetransitions.slide({
 															  'direction': 'left',
 															  'duration': 400,
 															  'androiddelay': 50,
 															  'href': 'next.html'
-															  });
+															  });*/
         
 	});
     

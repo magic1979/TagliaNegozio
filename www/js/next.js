@@ -11,12 +11,7 @@ function onDeviceReady() {
 	$(document).on("touchstart", "#indietro", function(e){
 		//window.location.href = "index.html";
 				   
-				   window.plugins.nativepagetransitions.slide({
-															  'direction': 'left',
-															  'duration': 400,
-															  'androiddelay': 50,
-															  'href': 'index.html'
-															  });
+        window.location.href = "index.html";
 				   
 	});
 
@@ -82,15 +77,8 @@ function onDeviceReady() {
     
     
     $(document).on("touchstart", "#edita", function(e){
-		
-		 window.location.href = "edita.html";
                    
-	   /*window.plugins.nativepagetransitions.slide({
-												  'direction': 'right',
-												  'duration': 400,
-												  'androiddelay': 50,
-												  'href': 'edita.html'
-												  });*/
+        window.location.href = "edita.html";
                    
     });
     
