@@ -4,12 +4,12 @@ function onDeviceReady() {
 	//document.addEventListener("resume", onResume, false);
 	//$("body").bind('touchmove', function(e){e.preventDefault()})
 	
-	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     
     localStorage.setItem("registrato","1")
     
 
-	openFB.init({appId: '202727853465076'});
+	//openFB.init({appId: '202727853465076'});
 	
 	
 	
