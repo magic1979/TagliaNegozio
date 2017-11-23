@@ -554,9 +554,9 @@ var app = {
                        
                        tabella1 = tabella1 + "<tr><td align='center' colspan='2' width='100%'><select id='idday'><option value='0'>Scegli Giorno</option><option value='1'>Lunedi</option><option value='2'>Martedi</option><option value='3'>Mercoledi</option><option value='4'>Giovedi</option><option value='5'>Venerdi</option><option value='6'>Sabato</option><option value='7'>Domenica</option></select></td></tr>"
                        
-                       tabella1 = tabella1 + "<tr><td align='left' width='20%'>Inizio:</td><td align='left' width='80%'><select id='orainizio' name='orainizio'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='mininizio' name='mininizio'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
+                       tabella1 = tabella1 + "<tr><td align='center' width='20%'>Inizio:</td><td align='center' width='80%'><select id='orainizio' name='orainizio'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='mininizio' name='mininizio'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
                        
-                       tabella1 = tabella1 + "<tr><td align='left' width='20%'>Fine:</td><td align='left' width='80%'> <select id='orafine' name='orafine'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='minfine' name='minfine'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
+                       tabella1 = tabella1 + "<tr><td align='center' width='20%'>Fine:</td><td align='center' width='80%'> <select id='orafine' name='orafine'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='minfine' name='minfine'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
                        
                        
                        tabella1 = tabella1 + "<tr><td align='center' colspan='2' width='100%'><a id='insertora'><img src='img/aggiungi.png' width='40'></a></td></tr>"
@@ -1001,9 +1001,9 @@ var app = {
                    
                    tabella1 = tabella1 + "<tr><td align='center' width='100%'><b>"+plutone[i]["Giorno"]+"</b></td></tr>"
                    
-                   tabella1 = tabella1 + "<tr><td align='left' width='100%'><input type='text' value='"+plutone[i]["OraInizio"]+"' name='orainizio2' id='orainizio2'><input type='hidden' value='"+ideccola+"' name='eccola' id='eccola'></td></tr>"
+                   tabella1 = tabella1 + "<tr><td align='center' width='100%'><input type='text' value='"+plutone[i]["OraInizio"]+"' name='orainizio2' id='orainizio2'><input type='hidden' value='"+ideccola+"' name='eccola' id='eccola'></td></tr>"
                    
-                   tabella1 = tabella1 + "<tr><td align='left' width='100%'><input type='text' value='"+plutone[i]["OraFine"]+"' name='orafine2' id='orafine2'></td></tr>"
+                   tabella1 = tabella1 + "<tr><td align='center' width='100%'><input type='text' value='"+plutone[i]["OraFine"]+"' name='orafine2' id='orafine2'></td></tr>"
                    
                    }
                    
