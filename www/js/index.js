@@ -301,47 +301,47 @@ var app = {
                           
                           
                           if(item.IDPrestazione=="15"){
+						  
+						  tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/colore.png' width='80'><font size='6'> &nbsp;<b>"+item.Descrizione+"</b></font></td></tr>"
+						  
+						  tabella1 = tabella1 + "<tr><td align='center' width='100%'><a id='#'> <img src='img/coloredonna.jpg' width='640'> </a> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="12"){
+						  
+						  tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/permanente.png' width='80'> <font size='6'> &nbsp;<b>"+item.Descrizione+"</b></font></td></tr>"
+						  
+						  tabella1 = tabella1 + "<tr><td align='center' width='100%'><a id='#'> <img src='img/permanente.jpg' width='640'> </a> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="16"){
+						  
+						  tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/taglio.png' width='80'> <font size='6'> &nbsp;<b>"+item.Descrizione+"</b></font></td></tr>"
+						  
+						  tabella1 = tabella1 + "<tr><td align='center' width='100%'><a id='#'> <img src='img/piega.jpg' width='640'> </a> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="14"){
+						  
+						  tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/shampoo.png' width='80'> <font size='6'> &nbsp;<b>"+item.Descrizione+"</b></font></td></tr>"
+						  
+						  tabella1 = tabella1 + "<tr><td align='center' width='100%'><a id='#'> <img src='img/shampouomo.jpg' width='640'> </a> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="11"){
+						  
+						  tabella1 = tabella1 + "<tr><td align='left' width='100'><a id='pp_"+pluto0+"'> <img src='img/taglio.png' width='80'><font size='6'> &nbsp;<b>"+item.Descrizione+"</b></font></td></tr>"
+						  
+						  tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/tagliodonna.jpg' width='640'> </a> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="10"){
+						  
+						  tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/taglio.png' width='80'> <font size='6'> &nbsp;<b>"+item.Descrizione+"</b></font></td></tr>"
+						  
+						  tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/tagliouomo.jpg' width='640'> </a> </td></tr>"
+						  }
+						  else{
+						  
+						  }
                           
-                          tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/colore.png' width='80'> </a> &nbsp;<b>"+item.Descrizione+"</b></td></tr>"
                           
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/coloredonna.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="12"){
-                          
-                          tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/permanente.png' width='80'> </a> &nbsp;<b>"+item.Descrizione+"</b></td></tr>"
-                          
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/permanente.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="16"){
-                          
-                          tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/taglio.png' width='80'> </a> &nbsp;<b>"+item.Descrizione+"</b></td></tr>"
-                          
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/piega.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="14"){
-                          
-                          tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/shampoo.png' width='80'> </a> &nbsp;<b>"+item.Descrizione+"</b></td></tr>"
-                          
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/shampouomo.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="11"){
-                          
-                          tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/taglio.png' width='80'> </a> &nbsp;<b>"+item.Descrizione+"</b></td></tr>"
-                          
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/tagliodonna.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="10"){
-                          
-                          tabella1 = tabella1 + "<tr><td align='left' width='100%'><a id='pp_"+pluto0+"'> <img src='img/taglio.png' width='80'> </a> &nbsp;<b>"+item.Descrizione+"</b></td></tr>"
-                          
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%' ><a id='#'> <img src='img/tagliouomo.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else{
-                          
-                          }
-                          
-                          
-                          tabella1 = tabella1 + "</table>";
+                          tabella1 = tabella1 + "</table><br><br> <a id='vediorario'><font color='#000' size='2'><img src='img/prestazioni.png' width='150'></font></a>";
                           
                           $("#mieiservizi").append(tabella1);
                           
@@ -549,19 +549,22 @@ var app = {
                        
                        $("#spinner").hide();
                        
-                       tabella1 = "<table width='80%' align='center'>";
+                         tabella1 = "<table width='80%' align='center'>";
                        
                        
-                       tabella1 = tabella1 + "<tr><td align='center' colspan='2' width='100%'><select id='idday'><option value='0'>Scegli Giorno</option><option value='1'>Lunedi</option><option value='2'>Martedi</option><option value='3'>Mercoledi</option><option value='4'>Giovedi</option><option value='5'>Venerdi</option><option value='6'>Sabato</option><option value='7'>Domenica</option></select></td></tr>"
+                        tabella1 = "<table width='80%' align='center' border='0'>";
+                   
+                   
+						tabella1 = tabella1 + "<tr><td align='center' width='100%'><select id='idday'><option value='0'>Scegli Giorno</option><option value='1'>Lunedi</option><option value='2'>Martedi</option><option value='3'>Mercoledi</option><option value='4'>Giovedi</option><option value='5'>Venerdi</option><option value='6'>Sabato</option><option value='7'>Domenica</option></select></td></tr>"
+								   
+						tabella1 = tabella1 + "<tr><td align='center' width='100%'>Inizio: <select id='orainizio' name='orainizio'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='mininizio' name='mininizio'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
+								   
+						tabella1 = tabella1 + "<tr><td align='center' width='100%'>Fine: <select id='orafine' name='orafine'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='minfine' name='minfine'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
+								   
+								   
+						tabella1 = tabella1 + "<tr><td align='center' colspan='2' width='100%'><br><a id='insertora'><img src='img/orario_aggiungi.png' width='140'></a></td></tr>"
                        
-                       tabella1 = tabella1 + "<tr><td align='center' width='20%'>Inizio:</td><td align='center' width='80%'><select id='orainizio' name='orainizio'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='mininizio' name='mininizio'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
-                       
-                       tabella1 = tabella1 + "<tr><td align='center' width='20%'>Fine:</td><td align='center' width='80%'> <select id='orafine' name='orafine'><option value='08' selected>08</option><option value='09'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option></select> | <select id='minfine' name='minfine'><option value='00' selected>00</option><option value='30'>30</option></select></td></tr>"
-                       
-                       
-                       tabella1 = tabella1 + "<tr><td align='center' colspan='2' width='100%'><a id='insertora'><img src='img/aggiungi.png' width='40'></a></td></tr>"
-                       
-                       tabella1 = tabella1 + "<tr><td align='center' width='80' colspan='2'><br><br><a id='pippo2'><img src='img/back.jpg' width='40'></a></td></tr></table>";
+                        tabella1 = tabella1 + "<tr><td align='center' width='80' colspan='2'><br><br><a id='pippo2'><img src='img/back.jpg' width='40'></a></td></tr></table>";
                        
                        $("#mieiservizi").append(tabella1);
                        
@@ -680,26 +683,26 @@ var app = {
                           tabella = "<table width='90%' align='center'>";
                           
                           if(item.IDPrestazione=="15"){
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/colore.png' width='80'> </a><b>"+item.NomePrestazione+","+paperino+"<b></td></tr><tr><td align='center' width='100%' ><a id='"+paperino+"'> <img src='img/coloredonna.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="12"){
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/permanente.png' width='80'> </a><b>"+item.NomePrestazione+","+paperino+"<b></td></tr><tr><td align='center' width='100%' ><a id='"+paperino+"'> <img src='img/permanente.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="16"){
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a><b>"+item.NomePrestazione+","+paperino+"<b></td></tr><tr><td align='center' width='100%' ><a id='"+paperino+"'> <img src='img/piega.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="14"){
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/shampoo.png' width='80'> </a><b>"+item.NomePrestazione+","+paperino+"<b></td></tr><tr><td align='center' width='100%' ><a id='"+paperino+"'> <img src='img/shampouomo.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="11"){
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <b>"+item.NomePrestazione+","+paperino+"<b></td></tr><tr><td align='center' width='100%' ><a id='"+paperino+"'> <img src='img/tagliodonna.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else if(item.IDPrestazione=="10"){
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <b>"+item.NomePrestazione+","+paperino+"<b></td></tr><tr><td align='center' width='100%' ><a id='"+paperino+"'> <img src='img/tagliouomo.jpg' width='640'> </a> </td></tr>"
-                          }
-                          else{
-                          tabella = tabella + "<tr><td align='left' width='100%'><a id='"+paperino+"'> <img src='img/aggiungi.png' width='30'> </a> <b>"+item.NomePrestazione+","+paperino+"<b></td></tr>"
-                          }
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/colore.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%'> <img src='img/coloredonna.jpg' width='640'>  </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="12"){
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/permanente.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' > <img src='img/permanente.jpg' width='640'> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="16"){
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/piega.jpg' width='640'> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="14"){
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/shampoo.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/shampouomo.jpg' width='640'> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="11"){
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/tagliodonna.jpg' width='640'> </td></tr>"
+						  }
+						  else if(item.IDPrestazione=="10"){
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/tagliouomo.jpg' width='640'> </td></tr>"
+						  }
+						  else{
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/aggiungi.png' width='30'> </a> <font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr>"
+						  }
                           
                           
                           tabella = tabella + "</table>";
@@ -1200,7 +1203,7 @@ var app = {
         
         
         $(document).on("touchstart", "#indietro", function(e){
-                       window.location.href = "#page";
+                       window.location.href = "index.html";
                        
                        });
         
@@ -1209,6 +1212,7 @@ var app = {
                        
                        });
         
+		
         $(document).on("touchstart", "#calendario", function(e){
 			
 						var myScroll2;

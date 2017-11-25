@@ -65,7 +65,7 @@
             $tr = $("<tr/>").appendTo($thead),
             $th = $("<th class='ui-bar-" + plugin.settings.theme + " header' colspan='7'/>");
          
-         $("<a href='#' data-role='button' data-icon='arrow-l' data-iconpos='notext' class='previous-btn'>Previous</a>").click(function() {
+         $("<a href='#' data-role='button' data-icon='arrow-l' data-iconpos='notext' class='previous-btn'>Previous</a>").touchstart(function() {
             refresh(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() - 1, 
                 plugin.settings.date.getDate()<=_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() - 1))?plugin.settings.date.getDate():_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() - 1))
                              
@@ -73,7 +73,7 @@
          }).appendTo($th);
 	 
 	 if (plugin.settings.yearArrow) {
-	     $("<a href='#' data-role='button' data-icon='arrow-d' data-iconpos='notext' class='previous-btn'>Previous</a>").click(function() {
+	     $("<a href='#' data-role='button' data-icon='arrow-d' data-iconpos='notext' class='previous-btn'>Previous</a>").touchstart(function() {
 		refresh(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() - 12, 
                    plugin.settings.date.getDate()<=_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() -12))?plugin.settings.date.getDate():_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() -12)) 
                                  
@@ -83,7 +83,7 @@
          
          $header = $("<span/>").appendTo($th);
          
-         $("<a href='#' data-role='button' data-icon='arrow-r' data-iconpos='notext' class='next-btn'>Next</a>").click(function() {
+         $("<a href='#' data-role='button' data-icon='arrow-r' data-iconpos='notext' class='next-btn'>Next</a>").touchstart(function() {
             var newDay= plugin.settings.date.getDate();
             var maxDay=_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() + 1),0);
             if (newDay>maxDay) {newDay=maxDay;}            
@@ -91,7 +91,7 @@
          }).appendTo($th);
          
 	 if (plugin.settings.yearArrow) {
-	      $("<a href='#' data-role='button' data-icon='arrow-u' data-iconpos='notext' class='next-btn'>Next</a>").click(function() {
+	      $("<a href='#' data-role='button' data-icon='arrow-u' data-iconpos='notext' class='next-btn'>Next</a>").touchstart(function() {
 		refresh(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() + 12, 
                     plugin.settings.date.getDate()<=_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() + 12))?plugin.settings.date.getDate():_daysInMonth(new Date(plugin.settings.date.getFullYear(), plugin.settings.date.getMonth() + 12))
                                  
