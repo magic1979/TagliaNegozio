@@ -133,7 +133,7 @@ var app = {
 				$.ajax({
 					   type:"GET",
 					   url:"http://www.msop.it/tagliafila/Check_RegToken.asp",
-					   data: {device:testo,platform:"android"},
+					   data: {device:testo,platform:"android",email:localStorage.getItem("email")},
 					   contentType: "application/json",
 					   json: 'callback',
 					   timeout: 7000,
