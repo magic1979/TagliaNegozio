@@ -528,17 +528,17 @@ var app = {
         
         $(document).on("touchstart", "#aggiorna", function(e){
                        
-                       window.location.href = "index.html";
-                       
-                       });
+		   window.location.href = "index.html";
+		   
+		   });
         
         
         $(document).on("touchstart", "#esci", function(e){
                        
-                       localStorage.setItem("email", "");
-                       window.location.href = "Login.html";
-                       
-                       });
+		   localStorage.setItem("email", "");
+		   window.location.href = "Login.html";
+		   
+		   });
         
         
         $(document).on("touchstart", "#addorario", function(e){
@@ -683,25 +683,25 @@ var app = {
                           tabella = "<table width='90%' align='center'>";
                           
                           if(item.IDPrestazione=="15"){
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/colore.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%'> <img src='img/coloredonna.jpg' width='640'>  </td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/colore.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr><tr><td align='center' width='100%'> <img src='img/coloredonna.jpg' width='640'>  </td></tr>"
 						  }
 						  else if(item.IDPrestazione=="12"){
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/permanente.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' > <img src='img/permanente.jpg' width='640'> </td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/permanente.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr><tr><td align='center' width='100%' > <img src='img/permanente.jpg' width='640'> </td></tr>"
 						  }
 						  else if(item.IDPrestazione=="16"){
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/piega.jpg' width='640'> </td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/piega.jpg' width='640'> </td></tr>"
 						  }
 						  else if(item.IDPrestazione=="14"){
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/shampoo.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/shampouomo.jpg' width='640'> </td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/shampoo.png' width='80'> </a><font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/shampouomo.jpg' width='640'> </td></tr>"
 						  }
 						  else if(item.IDPrestazione=="11"){
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/tagliodonna.jpg' width='640'> </td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/tagliodonna.jpg' width='640'> </td></tr>"
 						  }
 						  else if(item.IDPrestazione=="10"){
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/tagliouomo.jpg' width='640'> </td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/taglio.png' width='80'> </a> <font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr><tr><td align='center' width='100%' ><img src='img/tagliouomo.jpg' width='640'> </td></tr>"
 						  }
 						  else{
-						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/aggiungi.png' width='30'> </a> <font size='6'> <b>"+item.NomePrestazione+","+paperino+"</b></font></td></tr>"
+						  tabella = tabella + "<tr><td align='left' width='100%' valign='left'><a id='"+paperino+"'> <img src='img/aggiungi.png' width='30'> </a> <font size='6'> <b>"+item.NomePrestazione+"</b></font></td></tr>"
 						  }
                           
                           
@@ -1512,7 +1512,7 @@ var app = {
                                                                         adesso(this.id)
 																		
 																		setTimeout (function(){
-																			myScroll2.scrollToElement("#sopra", "1s");
+																			myScroll2.scrollToElement("#calendar", "1s");
 																		}, 300);
                                                                         
                                                             });
@@ -1566,9 +1566,14 @@ var app = {
 					  	var mese = item.dataorainizio.substr(5,2)
 					  	var giorno = item.dataorainizio.substr(8,2)
 					
-                   		calendario33 = "<table valign='center'><tr><td valign='center'><a id='aa_"+item.idappuntamento+"'><img src='img/appuntamento_modifica.png' width='150' class='ui-li-icon ui-corner-none'><font size='4' color='#000'>"+mese+","+giorno+" -"+item.nome+","+item.cognome+"  - Ore "+orainiziale+"."+mininiziale+"</font></a></td></tr></table>"
+                   		calendario33 = "<table valign='center'><tr><td valign='center'><a id='aa_"+item.idappuntamento+"'><img src='img/appuntamento_modifica.png' width='150' class='ui-li-icon ui-corner-none'><font size='2' color='#000'>"+mese+","+giorno+" -"+item.nome+","+item.cognome+"  - Ore "+orainiziale+"."+mininiziale+"</font></a></td></tr></table>"
                           
                           $("#calendario33").append(calendario33)
+						  
+						  setTimeout (function(){
+						    myScroll2.refresh();		 
+						  }, 300);
+									 
                           
                           $(document).on("touchstart", "#aa_"+item.idappuntamento+"", function(e){
                                          
@@ -1578,7 +1583,7 @@ var app = {
                                 adesso(appuntamentoid)
                                          
 									 setTimeout (function(){
-										 myScroll2.scrollToElement("#sopra", "1s");
+										 myScroll2.scrollToElement("#calendar", "1s");
 									 }, 300);
                                          
                             });
@@ -1668,9 +1673,9 @@ var app = {
                    
                    $(document).on("touchstart", "#pippo6", function(e){
                                   
-                                  window.location.href = "index.html";
+                        $("#appunta").hide();
                                   
-                                  });
+                   });
                    
                    
                    },
@@ -1713,13 +1718,10 @@ var app = {
                        var datafine3 = self.document.formia2.anno2.value+"-"+self.document.formia2.mese2.value+"-"+self.document.formia2.dayinizio2.value+"T"+oratot2+":"+mintot2+":00"
                        
                        
-                       /*var modifica = '{"IDAppuntamento": "'+self.document.formia2.eccolaapp.value+'","IDCliente": "'+self.document.formia2.idcliente.value+'","IDPrestazione": "'+self.document.formia2.idprestazione.value+'","IDNegozio": "'+localStorage.getItem("idnegozio")+'","DataOraInizio": "'+self.document.formia2.datainizio.value+'","DataOraFine": "'+self.document.formia2.datafine.value+'"}' */
+                       aggiornadame(self.document.formia2.eccolaapp.value,datainizio3,datafine3)
                        
-                       var modifica = '{"IDAppuntamento": "'+self.document.formia2.eccolaapp.value+'","IDCliente": "'+self.document.formia2.idcliente.value+'","IDPrestazione": "'+self.document.formia2.idprestazione.value+'","IDNegozio": "'+localStorage.getItem("idnegozio")+'","DataOraInizio": "'+datainizio3+'","DataOraFine": "'+datafine3+'"}'
+                       /*var modifica = '{"IDAppuntamento": "'+self.document.formia2.eccolaapp.value+'","IDCliente": "'+self.document.formia2.idcliente.value+'","IDPrestazione": "'+self.document.formia2.idprestazione.value+'","IDNegozio": "'+localStorage.getItem("idnegozio")+'","DataOraInizio": "'+datainizio3+'","DataOraFine": "'+datafine3+'"}'
                        
-                       //alert(modifica)
-                       
-                       // var modifica = '{"IDAppuntamento": "'+self.document.formia2.eccolaapp.value+'","IDCliente": "'+self.document.formia2.idcliente.value+'","IDPrestazione": "'+self.document.formia2.idprestazione.value+'","IDNegozio": "'+localStorage.getItem("idnegozio")+'","DataOraInizio": "'+self.document.formia2.datainizio.value+'","DataOraFine": "'+self.document.formia2.datafine.value+'"}'
                        
                        
                        $("#spinner").show();
@@ -1733,12 +1735,11 @@ var app = {
                               crossDomain: true,
                               success:function(result){
                               
-                              aggiornadame(self.document.formia2.eccolaapp.value,datainizio3,datafine3)
+                             
                               
                               alert("ok, orario modificato")
                               $("#spinner").hide();
                               
-                              //vediorario2();
                               },
                               error: function( jqXhr, textStatus, errorThrown ){
                               
@@ -1746,7 +1747,7 @@ var app = {
                               $("#spinner").hide();
                               
                               },
-                              dataType:"json"});
+                              dataType:"json"});*/
                        });
         
         
@@ -1771,6 +1772,7 @@ var app = {
                               
                               $("#spinner").hide();
                               alert("ok, appuntamento cancellato")
+							  controllaappuntamenti()
                               
                               //calendarionegozio()
                               
@@ -1790,7 +1792,7 @@ var app = {
             
             $.ajax({
                    type: "GET",
-                   url: "http://msop.it/tagliafila/check_updateappuntamentoneg.php?idappuntamento="+idappuntamento+"&dataorainizio="+datainizio+"&dataorafine="+datafine+"",
+                   url: "http://msop.it/tagliafila/check_updateappuntamentocli.php?idappuntamento="+idappuntamento+"&dataorainizio="+datainizio+"&dataorafine="+datafine+"",
                    cache: false,
                    crossDomain: true,
                    contentType: "application/json",
@@ -1802,6 +1804,7 @@ var app = {
                    
                    $("#spinner").hide();
                    alert("ok, appuntamento modificato")
+				   controllaappuntamenti()
                    
                    },
                    error: function( jqXhr, textStatus, errorThrown ){
