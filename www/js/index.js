@@ -1566,7 +1566,7 @@ var app = {
 					  	var mese = item.dataorainizio.substr(5,2)
 					  	var giorno = item.dataorainizio.substr(8,2)
 					
-                   		calendario33 = "<table valign='center'><tr><td valign='center'><a id='aa_"+item.idappuntamento+"'><img src='img/appuntamento_modifica.png' width='50' class='ui-li-icon ui-corner-none'><font size='4' color='#000'>"+mese+","+giorno+" -"+item.nome+","+item.cognome+"  - Ore "+orainiziale+"."+mininiziale+"</font></a></td></tr></table>"
+                   		calendario33 = "<table valign='center'><tr><td valign='center'><a id='aa_"+item.idappuntamento+"'><img src='img/appuntamento_modifica.png' width='150' class='ui-li-icon ui-corner-none'><font size='4' color='#000'>"+mese+","+giorno+" -"+item.nome+","+item.cognome+"  - Ore "+orainiziale+"."+mininiziale+"</font></a></td></tr></table>"
                           
                           $("#calendario33").append(calendario33)
                           
@@ -1654,7 +1654,7 @@ var app = {
                           tabella1 = tabella1 + "<tr><td align='center' width='100%'><select id='dayinizio2' name='dayinizio2'>GIORNO:<option value='"+giorno+"' selected>"+giorno+"</option></select></td></tr>"
                           
                           
-                          tabella1 = tabella1 + "<tr><td align='center' width='100%'><a id='aggiornaappuntamento'> <img src='img/appuntamento_modifica.png' width='120'></a> &nbsp;&nbsp;<a id='cancappuntamento'> <img src='img/appuntamento_cancella.png' width='120'></a></td></tr>"
+                          tabella1 = tabella1 + "<tr><td align='center' width='100%'><a id='aggiornaappuntamento'> <img src='img/appuntamento_modifica.png' width='150'></a> &nbsp;&nbsp;<a id='cancappuntamento'> <img src='img/appuntamento_cancella.png' width='150'></a></td></tr>"
                           
                           tabella1 = tabella1 + "<tr><td align='center' width='80%'><a id='pippo6'><img src='img/back.jpg' width='40'></a></td></tr></table></form>";
                           
