@@ -1215,55 +1215,53 @@ var app = {
 		
         $(document).on("touchstart", "#calendario", function(e){
 			
-			var myScroll2;
-    
-    					myScroll2 = new iScroll('wrapper2', {
-                           click: true,
-                           useTransform: false,
-                           //bounce: false,
-                           onBeforeScrollStart: function (e)
-                           {
-                           var target = e.target;
-                           while (target.nodeType != 1) {
-                           target = target.parentNode;
-                           }
-                           
-                           if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
-                           e.preventDefault();
-                           }
-                           }
-                           
-                         });
-    
-    
-						setTimeout (function(){
-								
-							myScroll2.refresh();
-								
-						}, 500);
+                window.location.href = "#page2";
                        
                        
-                       
-                       window.location.href = "#page2";
-                       
-                       
-                       $("#spinner2").hide();
+                $("#spinner2").hide();
 					   
-					   controllaappuntamenti()
+				controllaappuntamenti()
                        
+				
+				var myScroll2;
+    
+				myScroll2 = new iScroll('wrapper2', {
+				   click: true,
+				   useTransform: false,
+				   //bounce: false,
+				   onBeforeScrollStart: function (e)
+				   {
+				   var target = e.target;
+				   while (target.nodeType != 1) {
+				   target = target.parentNode;
+				   }
+				   
+				   if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
+				   e.preventDefault();
+				   }
+				   }
+				   
+				 });
+    
+				setTimeout (function(){
+						
+					myScroll2.refresh();
+						
+				}, 500);
+					
                        
-                       var date = new Date();
-                       var d = date.getDate();
-                       var m = date.getMonth();
-                       var y = date.getFullYear();
+                 var date = new Date();
+                 var d = date.getDate();
+                 var m = date.getMonth();
+                 var y = date.getFullYear();
                        
-                       $("#calendar").jqmCalendar({
+                 $("#calendar").jqmCalendar({
                                                   
-                                                  months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-                                                  days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-                                                  startOfWeek: 0
+                      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                      days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+                      startOfWeek: 0
                                                   
-                                                  });
+                  });
                        
                        
                        $("#calendar").bind('change', function(event, date) {
@@ -1271,7 +1269,7 @@ var app = {
                                            //myScroll2 = new IScroll('#wrapper2', { click: true });
 										   var myScroll2;
     
-											myScroll2 = new iScroll('wrapper', {
+											myScroll2 = new iScroll('wrapper2', {
 											   click: true,
 											   useTransform: false,
 											   //bounce: false,
@@ -1521,30 +1519,10 @@ var app = {
                                                   
                                                   $("#calendario33").append("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>")
                                                   
-												  
-												  	 var myScroll2;
-    
-													 myScroll2 = new iScroll('wrapper', {
-													   click: true,
-													   useTransform: false,
-													   //bounce: false,
-													   onBeforeScrollStart: function (e)
-													   {
-													   var target = e.target;
-													   while (target.nodeType != 1) {
-													   target = target.parentNode;
-													   }
-													   
-													   if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
-													   e.preventDefault();
-													   }
-													   }
-													   
-													  });
                                                   
-                                                  	   setTimeout (function(){
-                                                            myScroll2.refresh();
-                                                       }, 1000);
+												   setTimeout (function(){
+														myScroll2.refresh();
+												   }, 1000);
                                                   
                                                   },
                                                   error: function( jqXhr, textStatus, errorThrown ){
@@ -1608,7 +1586,7 @@ var app = {
 					 
 					 var myScroll2;
     
-    				 myScroll2 = new iScroll('wrapper', {
+    				 myScroll2 = new iScroll('wrapper2', {
                            click: true,
                            useTransform: false,
                            //bounce: false,
