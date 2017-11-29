@@ -1240,7 +1240,7 @@ var app = {
 								
 							myScroll2.refresh();
 								
-						}, 1000);
+						}, 500);
                        
                        
                        
@@ -1524,7 +1524,7 @@ var app = {
                                                   
                                                   	   setTimeout (function(){
                                                             myScroll2.refresh();
-                                                       }, 1200);
+                                                       }, 1000);
                                                   
                                                   },
                                                   error: function( jqXhr, textStatus, errorThrown ){
@@ -1569,11 +1569,7 @@ var app = {
                    		calendario33 = "<table valign='center'><tr><td valign='center'><a id='aa_"+item.idappuntamento+"'><img src='img/appuntamento_modifica.png' width='150' class='ui-li-icon ui-corner-none'><font size='2' color='#000'>"+mese+","+giorno+" -"+item.nome+","+item.cognome+"  - Ore "+orainiziale+"."+mininiziale+"</font></a></td></tr></table>"
                           
                           $("#calendario33").append(calendario33)
-						  
-						  setTimeout (function(){
-						    myScroll2.refresh();		 
-						  }, 300);
-									 
+						  		 
                           
                           $(document).on("touchstart", "#aa_"+item.idappuntamento+"", function(e){
                                          
@@ -1589,6 +1585,11 @@ var app = {
                             });
 						
 					 });
+					 
+					 
+					 setTimeout (function(){
+						 myScroll2.refresh();
+					  }, 700);
 					 
 
                    },
@@ -1615,7 +1616,7 @@ var app = {
         
         function adesso(eccola){
             
-            //alert(eccola)
+            $("#appunta").show();
             
             $("#spinner").show();
             
@@ -1772,7 +1773,7 @@ var app = {
                               
                               $("#spinner").hide();
                               alert("ok, appuntamento cancellato")
-							  controllaappuntamenti()
+							  //controllaappuntamenti()
                               
                               //calendarionegozio()
                               
@@ -1804,7 +1805,8 @@ var app = {
                    
                    $("#spinner").hide();
                    alert("ok, appuntamento modificato")
-				   controllaappuntamenti()
+				   
+				   //controllaappuntamenti()
                    
                    },
                    error: function( jqXhr, textStatus, errorThrown ){
