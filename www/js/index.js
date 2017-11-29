@@ -1342,7 +1342,7 @@ var app = {
                                                          var prex = item.idprestazione
                                                          
                                                          
-														 if(ora=="0800"){
+													if(ora=="0800"){
 													 
 													 $("#0800").html("<table width='100%' class='color' ><tr><td width='60%' align='left'><font color='#fff'>"+ora+" - "+prex+" - "+ x1 +"</font></td><td width='40%' align='right'><a id='"+paperino+"'><img src='img/appuntamento_modifica.png' width='80'></a></td></tr></table>");
 													 
@@ -1512,7 +1512,7 @@ var app = {
                                                                         adesso(this.id)
 																		
 																		setTimeout (function(){
-																			myScroll2.scrollToElement("#calendar", "1s");
+																			myScroll2.scrollToElement("#sopra", "1s");
 																		}, 300);
                                                                         
                                                             });
@@ -1521,6 +1521,26 @@ var app = {
                                                   
                                                   $("#calendario33").append("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>")
                                                   
+												  
+												  	 var myScroll2;
+    
+													 myScroll2 = new iScroll('wrapper', {
+													   click: true,
+													   useTransform: false,
+													   //bounce: false,
+													   onBeforeScrollStart: function (e)
+													   {
+													   var target = e.target;
+													   while (target.nodeType != 1) {
+													   target = target.parentNode;
+													   }
+													   
+													   if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
+													   e.preventDefault();
+													   }
+													   }
+													   
+													  });
                                                   
                                                   	   setTimeout (function(){
                                                             myScroll2.refresh();
@@ -1579,12 +1599,32 @@ var app = {
                                 adesso(appuntamentoid)
                                          
 									 setTimeout (function(){
-										 myScroll2.scrollToElement("#calendar", "1s");
+										 myScroll2.scrollToElement("#sopra", "1s");
 									 }, 300);
                                          
                             });
 						
 					 });
+					 
+					 var myScroll2;
+    
+    				 myScroll2 = new iScroll('wrapper', {
+                           click: true,
+                           useTransform: false,
+                           //bounce: false,
+                           onBeforeScrollStart: function (e)
+                           {
+                           var target = e.target;
+                           while (target.nodeType != 1) {
+                           target = target.parentNode;
+                           }
+                           
+                           if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'OPTION') {
+                           e.preventDefault();
+                           }
+                           }
+                           
+                       });
 					 
 					 
 					 setTimeout (function(){
@@ -1758,11 +1798,13 @@ var app = {
                        alert("cancella")
                        
                        var idappuntamento = self.document.formia2.eccolaapp.value
+					   
+					   var urlcanc = "http://msop.it/tagliafila/check_cancappuntamentoneg.php?idappuntamento="+idappuntamento+"";
                        
-                       $("#spinner").show();
+                       $("#spinner2").show();
                        $.ajax({
                               type: "GET",
-                              url: "http://msop.it/tagliafila/check_cancappuntamentoneg.php?idappuntamento="+idappuntamento+"",
+                              url: urlcanc,
                               cache: false,
                               crossDomain: true,
                               contentType: "application/json",
@@ -1771,7 +1813,7 @@ var app = {
                               crossDomain: true,
                               success: function (result) {
                               
-                              $("#spinner").hide();
+                              $("#spinner2").hide();
                               alert("ok, appuntamento cancellato")
 							  //controllaappuntamenti()
                               
@@ -1790,10 +1832,14 @@ var app = {
         
         
         function aggiornadame(idappuntamento,datainizio,datafine){
+			
+			 var urlmod = "http://msop.it/tagliafila/check_updateappuntamentocli.php?idappuntamento="+idappuntamento+"&dataorainizio="+datainizio+"&dataorafine="+datafine+"";
+			 
+			 $("#spinner2").show();
             
             $.ajax({
                    type: "GET",
-                   url: "http://msop.it/tagliafila/check_updateappuntamentocli.php?idappuntamento="+idappuntamento+"&dataorainizio="+datainizio+"&dataorafine="+datafine+"",
+                   url: urlmod,
                    cache: false,
                    crossDomain: true,
                    contentType: "application/json",
@@ -1803,7 +1849,7 @@ var app = {
                    success: function (result) {
                    
                    
-                   $("#spinner").hide();
+                   $("#spinner2").hide();
                    alert("ok, appuntamento modificato")
 				   
 				   //controllaappuntamenti()
