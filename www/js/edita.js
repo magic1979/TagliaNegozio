@@ -60,14 +60,14 @@ function onDeviceReady() {
 	
 
 	$(document).on("touchstart", "#indietro", function(e){
-		window.location.href = "next.html";
+		
+		window.plugins.nativepagetransitions.fade({
+						"duration"       :  800, // in milliseconds (ms), default 400
+						"iosdelay"       :   50, // ms to wait for the iOS webview to update before animation kicks in, default 60
+						"androiddelay"   :  600,
+						"href" : "index.html"
+					});
 				   
-				/*   window.plugins.nativepagetransitions.slide({
-															  'direction': 'left',
-															  'duration': 400,
-															  'androiddelay': 50,
-															  'href': 'next.html'
-															  });*/
         
 	});
     
